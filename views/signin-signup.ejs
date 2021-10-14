@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <link rel="stylesheet" defer href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="/signin-signup.css">
+</head>
+
+<body>
+    <div id="includeHeader"></div>
+
+    <div class="ls-banner"></div>
+
+    <% if (type == 'educator') { %>
+        <h1 class="section-title">Be an <span>Educator</span></h1><br><br>
+    <% } else { %>
+        <h1 class="section-title">Learn as <span>Student</span></h1><br><br>
+    <% } %>
+
+    <section id="login-signup">
+        <div class="ls-container" id="ls-container">
+            <div class="form-container">
+                <div class="form sign-up-container">
+                    <form id="signupform" method="POST">
+                        <br>
+                        <!-- <h1 class="section-title">Create <span>Account</span></h1> -->
+                        <div class="social-container">
+                            <a href="/sociologin/google/<%=type%>"><button type="button" class="cta" style="border-color: transparent; background-color: #DD4B39; margin-bottom: 0;">Sign Up with <i class="fab fa-google-plus-g"></i></button></a>
+                            <!-- <a href="/sociologin/facebook/educator" style="color: blue;" class="social"><i class="fab fa-facebook-f"></i></a> -->
+                            <!-- <a href="/sociologin/google/educator" style="color: red;" class="social"><i class="fab fa-google-plus-g"></i></a> -->
+                            <!-- <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
+                        </div>
+                        <span class="text">or<br> use your email for registration</span>
+                        <center>
+                            <div class="ls-inputs-container">
+                                <div class="ls-inputs">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="SUname" name="eduName" placeholder="Name" />
+                                </div>
+                                <div class="ls-inputs">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="SUemail" name="eduEmail" placeholder="Email" />
+                                </div>
+                                <div class="ls-inputs">
+                                    <i class="fas fa-lock"></i>
+                                    <input required type="password" id="SUpwd" name="eduPwd" placeholder="Password *" />
+                                </div>
+                            </div>
+                        </center>
+                        <p style="text-align: center;" id="pwdmessage"><span style="color: red; font-weight: bold;">*</span> Password must contain atleast one digit, lowercase and uppercase letter and minimum 6 characters long.</p>
+                        <p id="message2" style="font-weight: bold; color: red; text-align: center;"></p>
+                        <center><button type="submit" id="signupbtn" class="cta">Sign Up</button></center>
+                    </form>
+                </div>
+                <div class="form sign-in-container">
+                    <form id="signinform" method="POST">
+                        <!-- <h1 class="section-title">Sign <span>in</span></h1> -->
+                        <div class="social-container">
+                            <a href="/sociologin/google/<%=type%>"><button type="button" class="cta" style="border-color: transparent; background-color: #DD4B39; margin-bottom: 0;">Sign IN with <i class="fab fa-google-plus-g"></i></button></a>
+                            <!-- <a href="/sociologin/facebook/educator" style="color: blue;" class="social"><i class="fab fa-facebook-f"></i></a> -->
+                            <!-- <a href="/sociologin/google/educator" style="color: red;" class="social"><i class="fab fa-google-plus-g"></i></a> -->
+                            <!-- <a href="/be-an-educator/login" class="social"><i class="fab fa-linkedin-in"></i></a> -->
+                        </div>
+                        <span class="text">or<br> use your account</span>
+                        <center>
+                            <div class="ls-inputs-container">
+                                <div class="ls-inputs">
+                                    <i class="fas fa-envelope"></i>
+                                    <input required type="email" id="SIemail" name="eduEmail" placeholder="Email" />
+                                </div>
+                                <div class="ls-inputs">
+                                    <i class="fas fa-lock"></i>
+                                    <input required type="password" id="SIpwd" name="eduPwd" placeholder="Password" />
+                                </div>
+                            </div>
+                        </center>
+                        <p id="message" style="font-weight: bold; color: red; text-align: center;"></p>
+                        <a href="#" id="forgotPwd" class="text">Forgot your password?</a>
+                        <center><button type="submit" id="signinbtn" class="cta">Sign In</button></center>
+                    </form>
+                </div>
+            </div>
+            <div class="overlay-container">
+                <!-- <div class="overlay"> -->
+                <div class="overlay-left">
+                    <h1 class="sub-section-title">Welcome Back!</h1>
+                    <p class="text">To keep connected with us please login with your personal info</p>
+                    <button class="cta" id="signIn">Sign In</button>
+                    <a href="/"><button class="cta" id="Home">Home</button></a>
+                </div>
+                <div class="overlay-right">
+                    <h1 class="sub-section-title">Join Fast</h1>
+                    <p class="text">Enter your personal details and start journey with us</p>
+                    <button class="cta" id="signUp">Sign Up</button>
+                    <a href="/"><button class="cta" id="Home">Home</button></a>
+                </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </section>
+
+    <div class="forgotpwdcontainer_main" style="display: flex; justify-content: center;">
+        <div class="form forgot-password-container">
+            <form id="forgotpwdform" method="POST">
+                <h1 class="section-title">Forgot <span>Password</span></h1>
+                <center>
+                    <div class="ls-inputs-container">
+                        <div class="ls-inputs">
+                            <i class="fas fa-envelope"></i>
+                            <input required type="email" id="FPemail" name="eduFPEmail" placeholder="Email" />
+                        </div>
+                        <div class="ls-inputs">
+                            <i class="fas fa-lock"></i>
+                            <input required type="password" id="FPpwd" name="eduFPPwd" placeholder="New Password" />
+                        </div>
+                        <div class="ls-inputs">
+                            <i class="fas fa-lock"></i>
+                            <input required type="password" id="FPcpwd" name="eduFPNewPwd" placeholder="Confirm Password" />
+                        </div>
+                    </div>
+                </center>
+                <p id="message3" style="font-weight: bold; color: red; text-align: center;"></p>
+                <a href="#" id="alreadyAccount" class="text">Back</a>
+                <center><button type="submit" id="fogotpwdbtn" class="cta">RESET PASSWORD</button></center>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="includeFooter"></div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $("#includeHeader").load("/header.html");
+            $("#includeFooter").load("/footer.html");
+        });
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('ls-container');
+
+        signUpButton.addEventListener('click', () => {
+            container.classList.add("signup-active");
+            container.classList.remove("signin-active");
+            document.getElementById('message').innerText = ''
+            document.getElementById('message2').innerText = ''
+        });
+
+        signInButton.addEventListener('click', () => {
+            container.classList.remove("signup-active");
+            container.classList.add("signin-active");
+            document.getElementById('message').innerText = ''
+            document.getElementById('message2').innerText = ''
+        });
+
+        $('#signinbtn').click((e) => {
+            e.preventDefault();
+            var flag = 0
+            if (document.getElementById('SIemail').value == '') {
+                document.getElementById('message').innerText = 'Please Enter Email'
+                flag = 1
+                return
+            } else {
+                document.getElementById('message').innerText = ''
+                flag = 0
+            }
+            if (document.getElementById('SIpwd').value == '') {
+                document.getElementById('message').innerText = 'Please Enter Password'
+                flag = 1
+                return
+            } else {
+                document.getElementById('message').innerText = ''
+                flag = 0
+            }
+            if (flag == 0) {
+                var form = $('#signinform')[0]
+                var data = new FormData(form)
+                $.ajax({
+                    type: "POST",
+                    enctype: false,
+                    url: "/be-an-educator/login",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    success: (data) => {
+                        if (data == 'success')
+                            location.href = '/be-an-educator/dashboard/home'
+                        else if (data == 'profile') {
+                            location.href = '/be-an-educator/setting-up-profile'
+                        } else if (data == 'adminSuccess') {
+                            location.href = '/admin/dashboard/educators'
+                        } else {
+                            $('#SIpwd').val('')
+                            document.getElementById('message').innerText = data
+                        }
+                    },
+                    error: (e) => {
+                        console.log(e)
+                        document.getElementById('message').innerText = 'An unexpected error occured.'
+                    }
+                })
+            } else {
+                document.getElementById('message').innerText = 'Please fill all the fields'
+            }
+        })
+        $('#signupbtn').click((e) => {
+            e.preventDefault();
+            var flag = 0
+            var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+            if (document.getElementById('SUname').value == '') {
+                document.getElementById('message2').innerText = 'Please Enter Name'
+                flag = 1
+                return
+            } else {
+                document.getElementById('message2').innerText = ''
+                flag = 0
+            }
+            if (document.getElementById('SUemail').value == '') {
+                document.getElementById('message2').innerText = 'Please Enter Email'
+                flag = 1
+                return
+            } else {
+                document.getElementById('message2').innerText = ''
+                flag = 0
+            }
+            if (document.getElementById('SUpwd').value == '') {
+                document.getElementById('message2').innerText = 'Please Enter Password'
+                flag = 1
+                return
+            } else if (!re.test(document.getElementById('SUpwd').value)) {
+                console.log('!'+re.test(document.getElementById('SUpwd').value))
+                document.getElementById('message2').innerText = 'Password must contain atleast one digit, lowercase and uppercase letter and minimum 6 characters long.'
+                flag = 1
+                return
+            } else {
+                console.log('else'+re.test(document.getElementById('SUpwd').value))
+                document.getElementById('message2').innerText = ''
+                flag = 0
+            }
+            if (flag == 0) {
+                document.getElementById('pwdmessage').style.display = 'none'
+                var form = $('#signupform')[0]
+                var data = new FormData(form)
+                document.getElementById('signupbtn').style.cursor = 'progress'
+                document.getElementById('signupform').style.cursor = 'progress'
+                $.ajax({
+                    type: "POST",
+                    enctype: false,
+                    url: "/be-an-educator/signup",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    success: (data) => {
+                        document.getElementById('signupbtn').style.cursor = 'auto'
+                        document.getElementById('signupform').style.cursor = 'auto'
+                        if (data == 'success') {
+                            setTimeout(() => {
+                                document.getElementById('signupbtn').style.cursor = 'auto'
+                                document.getElementById('signupform').style.cursor = 'auto'
+                                document.getElementById('message2').innerHTML = '<span style="color: green;">Please verify your mail.<br>The link has been sent to your mail.<br>Do check your spam folder as well.</span>'
+                                document.getElementById('signupform').reset()                                
+                            }, 3000);
+                        }
+                            // location.href = '/be-an-educator/setting-up-profile'
+                        else {
+                            $('#SUpwd').val('')
+                            document.getElementById('message2').innerText = data
+                        }
+                    },
+                    error: (e) => {
+                        console.log(e)
+                        document.getElementById('message2').innerText = 'An unexpected error occured.'
+                    }
+                })
+            } else {
+                document.getElementById('message2').innerText = 'Please fill all the fields'
+            }
+        })
+        $('#fogotpwdbtn').click((e) => {
+            e.preventDefault();
+            var flag = 0
+            if (document.getElementById('FPemail').value == '') {
+                document.getElementById('message3').innerText = 'Please Enter Email'
+                flag = 1
+                return
+            } else {
+                document.getElementById('message3').innerText = ''
+                flag = 0
+            }
+            if (document.getElementById('FPpwd').value == '') {
+                document.getElementById('message3').innerText = 'Please Enter Password'
+                flag = 1
+                return
+            } else {
+                document.getElementById('message3').innerText = ''
+                flag = 0
+            }
+            if (document.getElementById('FPcpwd').value == '') {
+                document.getElementById('message3').innerText = 'Please Enter Confirm Password'
+                flag = 1
+                return
+            } else {
+                document.getElementById('message3').innerText = ''
+                flag = 0
+            }
+            if ($('#FPpwd').val() != $('#FPcpwd').val()) {
+                document.getElementById('message3').innerText = 'Passwords do not match'
+                flag = 1
+                return
+            } else {
+                document.getElementById('message3').innerText = ''
+                flag = 0
+            }
+
+            if (flag == 0) {
+                var form = $('#forgotpwdform')[0]
+                var data = new FormData(form)
+                $.ajax({
+                    type: "POST",
+                    enctype: false,
+                    url: "/be-an-educator/fogot-pwd",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    success: (data) => {
+                        if (data == 'success') {
+                            document.getElementById('forgotpwdform').style.cursor = 'progress'
+                            document.getElementById('fogotpwdbtn').style.cursor = 'progress'
+                            $('#FPpwd').val('')
+                            $('#FPcpwd').val('')
+                            document.getElementById('message3').innerHTML = '<span style="color: green;">Your password is successfully reset. Kindly login with your new password.</span>'
+                            setTimeout(() => {
+                                location.href = '/login-signup'
+                            }, 5000);
+                        } else {
+                            $('#FPpwd').val('')
+                            $('#FPcpwd').val('')
+                            document.getElementById('message3').innerText = data
+                        }
+                    },
+                    error: (e) => {
+                        console.log(e)
+                        document.getElementById('message3').innerText = 'An unexpected error occured.'
+                    }
+                })
+            } else {
+                document.getElementById('message3').innerText = 'Please fill all the fields'
+            }
+        })
+
+        const forgotPwdButton = document.getElementById('forgotPwd');
+        const alreadyAccButton = document.getElementById('alreadyAccount');
+        const forgotContainer = document.getElementsByClassName('forgot-password-container')[0];
+
+
+        forgotPwdButton.addEventListener('click', () => {
+            document.getElementById('login-signup').style.display = 'none';
+            forgotContainer.style.display = "block";
+            document.getElementById('message').innerText = ''
+            document.getElementById('message2').innerText = ''
+        });
+
+        alreadyAccButton.addEventListener('click', () => {
+            document.getElementById('login-signup').style.display = 'flex';
+            forgotContainer.style.display = "none";
+            document.getElementById('message').innerText = ''
+            document.getElementById('message2').innerText = ''
+        });
+    </script>
+</body>
+
+</html>

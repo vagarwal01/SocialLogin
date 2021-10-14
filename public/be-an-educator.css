@@ -1,0 +1,479 @@
+/* Hero Section */
+
+#hero {
+    background-image: url(be-an-educator/beaneducator_oceraedtech.png);
+    background-size: cover;
+    background-position: top right;
+    position: relative;
+    z-index: 1;
+    height: 400px;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .5;
+    z-index: -1;
+}
+
+#hero .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+#hero .heading {
+    position: absolute;
+    bottom: 70px;
+    /* margin-top: -160px; */
+}
+
+#hero h1 {
+    display: block;
+    width: fit-content;
+    font-size: 30px;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1s;
+}
+
+#hero h1:nth-child(1) {
+    animation-delay: 1s;
+}
+
+#hero h1:nth-child(2) {
+    animation-delay: 2s;
+}
+
+#hero h1:nth-child(3) {
+    animation-delay: 3s;
+}
+
+#hero h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #161361;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .5s;
+}
+
+#hero h1:nth-child(1) span {
+    animation-delay: .5s;
+}
+
+#hero h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+
+#hero h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+
+
+/* End Hero Section */
+
+
+/* Expand your Horizon */
+
+.horizon {
+    flex-direction: column;
+    display: flex;
+    overflow-x: hidden;
+    margin: 40px 0px;
+}
+
+.horizon .all-views {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 40px;
+    justify-content: center;
+    width: 100%;
+}
+
+.horizon .all-views .view-item-main {
+    width: 40%;
+    margin: 3%;
+}
+
+
+/* .horizon .all-views .view-item-main {
+    border: 2px solid black;
+} */
+
+.horizon .all-views .view-item {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    height: 180px;
+}
+
+.horizon .all-views .item1 {
+    background-image: url(images/be-an-educator/passport.svg);
+}
+
+.horizon .all-views .item2 {
+    background-image: url(images/be-an-educator/learning.svg);
+}
+
+.horizon .all-views .item3 {
+    background-image: url(images/be-an-educator/world-humanitarian-day.svg);
+}
+
+.horizon .all-views .item4 {
+    background-image: url(images/be-an-educator/brain-process.svg);
+}
+
+.horizon .all-views .item5 {
+    background-image: url(images/be-an-educator/earn-money.svg);
+}
+
+.horizon .all-views .view-item-main h1 {
+    margin-top: 4%;
+    text-align: center;
+}
+
+
+/* End Expand your Horizon */
+
+
+/* Assisstance Section  */
+
+.assisstance {
+    display: flex;
+    align-items: center;
+    margin: 0 40px;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 400px) {
+    .assisstance {
+        margin: 0 20px;
+    }
+}
+
+.assisstance .left-assisstance {
+    background-image: url(be-an-educator/Getassistance_Ocearedtech.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    min-height: 300px;
+    flex: 1;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.assisstance .left-assisstance::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .5;
+    z-index: -1;
+}
+
+.assisstance .left-assisstance h1 {
+    padding: 0 3px;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.assisstance .left-assisstance .short {
+    padding: 0 2%;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.right-assisstance {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.right-assisstance .assisstance-title {
+    font-size: 3rem;
+}
+
+.right-assisstance h3 {
+    margin-top: 10px;
+    font-size: 2rem;
+}
+
+
+/* .right-assisstance button {
+    padding: 20px 30px;
+}  */
+
+
+/* End assisstance Section  */
+
+/* Course Structure */
+.course_structure{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    height: 450px;
+    justify-content: center;
+}
+.p_steps{
+    font-size: 2rem;
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+}
+.flexbox {
+    display: flex;
+    width: 100%;
+    height: max-content;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-top: 40px;
+    padding: 0;
+    padding-right: 0;
+}
+
+.flex {
+    width: 16%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 2%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    justify-content: center;
+    z-index: 0;
+}
+
+.flexbottom {
+    border-bottom: 6px solid #33999e;
+    border-bottom-left-radius: 70%;
+    border-bottom-right-radius: 70%;
+    position: relative;
+}
+
+.flextop {
+    border-top: 6px solid #33999e;
+    border-top-left-radius: 70%;
+    border-top-right-radius: 70%;
+    position: relative;
+}
+
+.flexbottom {
+    bottom: 0px;
+    box-shadow: inset 0px -20px 0px;
+    color: #33999e;
+}
+
+.flextop {
+    box-shadow: inset 0px 20px 0px;
+    color: #33999e;
+}
+
+.stepNumber {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 1px solid #161361;
+    border-radius: 50px 0px 50px 0px;
+    background: #161361;
+    color: white;
+}
+
+.i_style {
+    color: #161361;
+    margin: 20px 0;
+}
+.data-name {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* End Course Structure */
+
+
+/* Media Query For Tablet */
+
+@media only screen and (min-width: 768px) {
+    #hero {
+        height: 500px;
+    }
+    #hero .heading {
+        margin-top: -20px;
+    }
+    #hero h1 {
+        font-size: 3rem;
+        margin-bottom: 3%;
+    }
+    .horizon .all-views {
+        justify-content: space-evenly;
+    }
+    .horizon .all-views .view-item-main {
+        width: 30%;
+        margin: 1%;
+    }
+    .assisstance {
+        flex-direction: row;
+    }
+    .assisstance .left-assisstance {
+        height: 300px;
+        width: 50%;
+    }
+    .assisstance .left-assisstance h1 {
+        padding: 0 0;
+    }
+    .right-assisstance {
+        margin-top: 0px;
+    }
+    .right-assisstance .assisstance-title {
+        font-size: 3.5rem;
+    }
+    .right-assisstance h3 {
+        margin-top: 0px;
+    }
+}
+
+
+/* Media Query For Tablet */
+
+
+/* Media Query For Desktop */
+
+@media only screen and (min-width: 1100px) {
+    .horizon .all-views .view-item-main {
+        width: 20%;
+        margin: 0 3%;
+    }
+}
+
+/* Media Queries */
+
+@media (max-width: 1000px) {
+    .course_structure img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1250px) {
+    .flex {
+        width: 19%;
+    }
+}
+
+@media (max-width: 950px) {
+    .flexbox {
+        width: 97%;
+    }
+}
+
+@media (max-width: 880px) {
+    .flex {
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .course_structure {
+        margin-top: 10px;
+        height: max-content;
+    }
+    .course_structure img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .flexbox_cont {
+        display: flex;
+        justify-content: center;
+    }
+    .flexbox {
+        display: flex;
+        width: 80%;
+        height: max-content;
+        flex-direction: column;
+    }
+    .flex {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 2% 4%;
+    }
+    .stepNumber {
+        width: 40%;
+        height: max-content;
+        font-size: 1.5rem;
+        text-align: center;
+        border: 1px solid #33999e;
+        border-radius: 50px 0px 50px 0px;
+        background: #33999e;
+        color: white;
+    }
+    .imgbox {
+        width: 50%;
+    }
+    .flexbottom {
+        border-left: 20px solid #33999e;
+        border-bottom: none;
+        border-top-left-radius: 100%;
+        border-bottom-left-radius: 100%;
+        box-shadow: none;
+    }
+    .flextop {
+        border-right: 20px solid #33999e;
+        border-top: none;
+        border-top-right-radius: 100%;
+        border-bottom-right-radius: 100%;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 550px) {
+    .flexbox {
+        width: 90%;
+    }
+}
+
+@media (max-width: 420px) {
+    .flex {
+        flex-direction: column;
+        padding: 5% 0;
+    }
+    .i_style {
+        margin: 1%;
+    }
+}
+
+@media (max-width: 320px) {
+    .flex {
+        padding: 6% 0;
+    }
+}

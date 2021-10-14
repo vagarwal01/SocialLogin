@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/header.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <nav class="header">
+        <div class="logo">
+            <img src="/ocera-edtech-logo-mini.png">
+            <a href="/" data-tooltip="Home" class="hover_effect">
+                <h1><span>OC</span>era <span>Ed</span>Tech</h1>
+            </a>
+        </div>
+        <label for="btn" class="hamburger">
+            <div class="bar"></div>
+         </label>
+        <input class="checkbox" type="checkbox" id="btn">
+        <ul>
+            <li><a href="/about-us">About Us</a></li>
+            <li><a href="/blogs">Blog</a></li>
+            <li>
+                <label for="btn-2" class="show">Courses <i class="fas fa-caret-down"></i></label>
+                <a href="#">Courses <i class="fas fa-caret-down"></i></a>
+                <input class="checkbox" type="checkbox" id="btn-2">
+                <ul>
+                    <li>
+                        <label for="btn-msc" class="show">Main Stream Courses <i class="fas fa-caret-down"></i></label>
+                        <a href="#">Main Stream Courses <i class="fas fa-caret-down"></i></a>
+                        <input class="checkbox" type="checkbox" id="btn-msc">
+                        <ul>
+                            <li><a href="#">Art and Literature</a></li>
+                            <li><a href="#">Languages</a></li>
+                            <li><a href="#">Philosophy</a></li>
+                            <li><a href="#">Indology</a></li>
+                            <li><a href="#">Dance and Theatre</a></li>
+                            <li><a href="#">Pure and Applied Sciences</a></li>
+                            <li><a href="#">Mathematics</a></li>
+                            <li><a href="#">Statistics</a></li>
+                            <li><a href="#">Sociology</a></li>
+                            <li><a href="#">Economics</a></li>
+                            <li><a href="#">Translation and Interpretation</a></li>
+                            <li><a href="#">Sports</a></li>
+                            <div class="arrow"></div>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="btn-vbc" class="show">Value Based Courses <i class="fas fa-caret-down"></i></label>
+                        <a href="#">Value Based Courses <i class="fas fa-caret-down"></i></a>
+                        <input class="checkbox" type="checkbox" id="btn-vbc">
+                        <ul>
+                            <li><a href="#">Human Values</a></li>
+                            <li><a href="#">Indology</a></li>
+                            <li><a href="#">Yoga and Meditation</a></li>
+                            <div class="arrow"></div>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="btn-vsd" class="show">Value Added and Skill Development Courses <i class="fas fa-caret-down"></i></label>
+                        <a href="#">Value Added and Skill Development Courses <i class="fas fa-caret-down"></i></a>
+                        <input class="checkbox" type="checkbox" id="btn-vsd">
+                        <ul>
+                            <li><a href="#">Career Development</a></li>
+                            <li><a href="#">Business Skills</a></li>
+                            <li><a href="#">Industry 4.0 Skills</a></li>
+                            <li><a href="#">Health Care</a></li>
+                            <li><a href="#">Designing Skills</a></li>
+                            <li><a href="#">Academic Writing</a></li>
+                            <li><a href="#">Software Trainings</a></li>
+                            <div class="arrow"></div>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="btn-pdc" class="show">Personality Development Courses <i class="fas fa-caret-down"></i></label>
+                        <a href="#">Personality Development Courses <i class="fas fa-caret-down"></i></a>
+                        <input class="checkbox" type="checkbox" id="btn-pdc">
+                        <ul>
+                            <li><a href="#">Personal Development</a></li>
+                            <li><a href="#">Communication Skills</a></li>
+                            <li><a href="#">Parenting Skills</a></li>
+                            <li><a href="#">Psychology</a></li>
+                            <li><a href="#">Stress Management</a></li>
+                            <div class="arrow"></div>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="btn-pec" class="show">Professional Education Courses <i class="fas fa-caret-down"></i></label>
+                        <a href="#">Professional Education Courses <i class="fas fa-caret-down"></i></a>
+                        <input class="checkbox" type="checkbox" id="btn-pec">
+                        <ul>
+                            <li><a href="#">Agriculture Education</a></li>
+                            <li><a href="#">Legal Education</a></li>
+                            <li><a href="#">Health Care Education</a></li>
+                            <li><a href="#">Technical Education</a></li>
+                            <div class="arrow"></div>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="btn-stem" class="show">STEM Courses <i class="fas fa-caret-down"></i></label>
+                        <a href="#">STEM Courses <i class="fas fa-caret-down"></i></a>
+                        <input class="checkbox" type="checkbox" id="btn-stem">
+                        <ul>
+                            <li><a href="#">Science</a></li>
+                            <li><a href="#">Technology</a></li>
+                            <li><a href="#">Engineering</a></li>
+                            <li><a href="#">Mathematics</a></li>
+                            <div class="arrow"></div>
+                        </ul>
+                    </li>
+                    <div class="arrow-main"></div>
+                </ul>
+            </li>
+            <li><a href="/career">Career</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li id="actionli">
+                <label for="btn-ls" class="show">Login <i class="fas fa-caret-down"></i></label>
+                <a href="#">Login</a>
+                <input class="checkbox" type="checkbox" id="btn-ls">
+                <!-- <a href="/login-signup">Login</a> -->
+                <ul class="ls">
+                    <li><a href="/login-signup/educator">Be an Educator</a></li>
+                    <li><a href="/login-signup/student">Learn as Student</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <script>
+        const header = document.querySelector('nav.header');
+
+        document.addEventListener('scroll', () => {
+            var scroll_position = window.scrollY;
+            if (!$('.header').hasClass('active')) {
+                if (scroll_position > 100) {
+                    header.style.backgroundColor = '#161361';
+                } else {
+                    header.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+                }
+            } else {
+                header.style.backgroundColor = 'rgb(31, 30, 30)';
+            }
+        });
+
+        $('.hamburger').click(function() {
+            $('span').toggleClass("cancel");
+            document.querySelector('.hamburger').classList.toggle('active');
+            if ($('.hamburger').hasClass('active')) {
+                $('.header').addClass('active')
+                header.style.backgroundColor = 'rgb(31, 30, 30)';
+            } else {
+                $('.header').removeClass('active')
+            }
+        });
+    </script>
+</body>
+
+</html>
